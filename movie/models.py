@@ -12,7 +12,7 @@ class TimestampedModel(models.Model):
 
 class Post(TimestampedModel):
     title = models.CharField(max_length=100, db_index=True, validators=[
-                                 MinLengthValidator(3),
+                                 MinLengthValidator(1),
                                  RegexValidator(r"[ㄱ-힣]", message="한글을 한 글자 이상 입력해주세요."),
                              ])
     poster = models.ImageField(blank=True)
