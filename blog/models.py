@@ -9,6 +9,6 @@ class TimestampedModel(models.Model):
         abstract = True
 
 
-class Post(models.Model):
+class Post(TimestampedModel):
     title = models.CharField(max_length=100)
     content = models.TextField()
